@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Users;
 
+use App\User;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateRequest extends FormRequest
@@ -49,7 +50,7 @@ class UpdateRequest extends FormRequest
         ];
     }
 
-    public function validated()
+    public function validated(User $user = null)
     {
         $formData = parent::validated();
 
@@ -61,6 +62,8 @@ class UpdateRequest extends FormRequest
 
         if (!empty($formData['password'])) {
             $formData['password'] = bcrypt($formData['password']);
+        } else {
+            $formData['password'] = $user->getAuthPassword();
         }
 
         return $formData;

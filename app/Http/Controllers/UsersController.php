@@ -12,6 +12,16 @@ use App\Http\Requests\Users\UpdateRequest;
 class UsersController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Search user by keyword.
      *
      * @return \Illuminate\View\View
@@ -123,7 +133,7 @@ class UsersController extends Controller
      */
     public function update(UpdateRequest $request, User $user)
     {
-        $user->update($request->validated());
+        $user->update($request->validated($user));
 
         return redirect()->route('users.show', $user->id);
     }
