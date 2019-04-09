@@ -5,7 +5,7 @@
 
     @can('edit', $couple)
     <div class="pull-right">
-        {{ link_to_route('couples.edit', trans('couple.edit'), [$couple], ['class' => 'btn btn-warning']) }}
+        {{ link_to_route('couples.edit', trans('couple.edit'), [$couple], ['class' => 'btn btn-success']) }}
     </div>
     @endcan
 

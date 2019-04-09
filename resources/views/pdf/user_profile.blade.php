@@ -25,7 +25,7 @@
     <table width="100%" style="border: 1px solid black;">
         <tr>
             <td width="40%">
-                <table class="left-table" width="100%" style="border-right: 1px solid black;">
+                <table class="left-table" width="100%">
                     <tbody>
                     <tr>
                         <td colspan="2">
@@ -78,7 +78,7 @@
                 </table>
             </td>
             <td width="60%">
-                <table class="family-tabel" width="100%">
+                <table class="family-tabel" width="100%" style="border-left: 1px solid black;">
                     <tbody>
                         <tr>
                             <td colspan="2"><h3>{{ __('user.family') }}</h3></td>

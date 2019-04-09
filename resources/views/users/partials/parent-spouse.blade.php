@@ -21,7 +21,7 @@
                         @else
                             {{ $user->fatherLink() }}
                             <div class="pull-right">
-                                {{ link_to_route('users.show', __('user.set_father'), [$user->id, 'action' => 'set_father'], ['class' => 'btn btn-link btn-xs']) }}
+                                {{ link_to_route('users.show', __('user.set_father'), [$user->id, 'action' => 'set_father'], ['class' => 'btn btn-success btn-xs']) }}
                             </div>
                         @endif
                     @else
@@ -47,7 +47,7 @@
                         @else
                             {{ $user->motherLink() }}
                             <div class="pull-right">
-                                {{ link_to_route('users.show', __('user.set_mother'), [$user->id, 'action' => 'set_mother'], ['class' => 'btn btn-link btn-xs']) }}
+                                {{ link_to_route('users.show', __('user.set_mother'), [$user->id, 'action' => 'set_mother'], ['class' => 'btn btn-success btn-xs']) }}
                             </div>
                         @endif
                     @else
@@ -61,7 +61,7 @@
                     @can ('edit', $user)
                     <div class="pull-right">
                         @unless (request('action') == 'set_parent')
-                            {{ link_to_route('users.show', __('user.set_parent'), [$user->id, 'action' => 'set_parent'], ['class' => 'btn btn-link btn-xs']) }}
+                            {{ link_to_route('users.show', __('user.set_parent'), [$user->id, 'action' => 'set_parent'], ['class' => 'btn btn-success btn-xs']) }}
                         @endunless
                     </div>
                     @endcan
@@ -88,7 +88,7 @@
                     @can ('edit', $user)
                     <div class="pull-right">
                         @unless (request('action') == 'add_spouse')
-                            {{ link_to_route('users.show', __('user.add_wife'), [$user->id, 'action' => 'add_spouse'], ['class' => 'btn btn-link btn-xs']) }}
+                            {{ link_to_route('users.show', __('user.add_wife'), [$user->id, 'action' => 'add_spouse'], ['class' => 'btn btn-success btn-xs']) }}
                         @endunless
                     </div>
                     @endcan
@@ -130,7 +130,7 @@
                     @can ('edit', $user)
                     <div class="pull-right">
                         @unless (request('action') == 'add_spouse')
-                            {{ link_to_route('users.show', __('user.add_husband'), [$user->id, 'action' => 'add_spouse'], ['class' => 'btn btn-link btn-xs']) }}
+                            {{ link_to_route('users.show', __('user.add_husband'), [$user->id, 'action' => 'add_spouse'], ['class' => 'btn btn-success btn-xs']) }}
                         @endunless
                     </div>
                     @endcan

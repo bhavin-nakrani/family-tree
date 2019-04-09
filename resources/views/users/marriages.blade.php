@@ -19,7 +19,7 @@
                 {{-- <tr><th>{{ trans('couple.grand_childs_count') }}</th><td>?</th></tr> --}}
             </table>
             <div class="panel-footer">
-                {{ link_to_route('couples.show', trans('couple.show'), [$marriage->id], ['class' => 'btn btn-default btn-xs']) }}
+                {{ link_to_route('couples.show', trans('couple.show'), [$marriage->id], ['class' => 'btn btn-success btn-xs']) }}
             </div>
         </div>
     </div>
