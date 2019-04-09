@@ -8,6 +8,7 @@ use App\User;
 use App\Couple;
 use Illuminate\Http\Request;
 use App\Http\Requests\Users\UpdateRequest;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class UsersController extends Controller
 {
@@ -197,6 +198,25 @@ class UsersController extends Controller
         $user->save();
 
         return back();
+    }
+
+    public function exportProfile(User $user)
+    {
+        $usersMariageList = $this->getUserMariageList($user);
+        $allMariageList = $this->getAllMariageList();
+        $malePersonList = $this->getPersonList(1);
+        $femalePersonList = $this->getPersonList(2);
+
+        $data = [
+            'user'             => $user,
+            'usersMariageList' => $usersMariageList,
+            'malePersonList'   => $malePersonList,
+            'femalePersonList' => $femalePersonList,
+            'allMariageList'   => $allMariageList,
+        ];
+
+        $pdfView = PDF::loadView('pdf.user_profile', $data);
+        return $pdfView->download($user->name.'-profile.pdf');
     }
 
     /**

@@ -3,6 +3,7 @@
 return [
     // Labels
     'my_profile'        => 'My Profile',
+    'export'            => 'Export',
     'search'            => 'Search',
     'unknown'           => 'Unknown',
     'male'              => 'Male',

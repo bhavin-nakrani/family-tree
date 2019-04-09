@@ -46,6 +46,11 @@ Route::get('couples/{couple}/edit', ['as' => 'couples.edit', 'uses' => 'CouplesC
 Route::patch('couples/{couple}', ['as' => 'couples.update', 'uses' => 'CouplesController@update']);
 
 /**
+ * Export User profiles
+ */
+Route::get('export/{user}/profile', 'UsersController@exportProfile')->name('export.profile');
+
+/**
  * Backup Restore Database Routes
  */
 Route::post('backups/upload', ['as' => 'backups.upload', 'uses' => 'BackupsController@upload']);

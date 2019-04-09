@@ -12,7 +12,6 @@ use League\Flysystem\FileNotFoundException;
 /**
  * Database Backups Controller.
  *
- * @author Nafies Luthfi <nafiesL@gmail.com>
  */
 class BackupsController extends Controller
 {
