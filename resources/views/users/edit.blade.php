@@ -97,7 +97,7 @@
                     {!! FormField::password('password', ['label' => trans('auth.old_password'), 'placeholder' => '******', 'value' => '']) !!}
                 </div>
             </div>
-            <div class="text-right">
+            <div class="text-right pdb50">
                 {{ Form::submit(trans('app.update'), ['class' => 'btn btn-primary']) }}
                 {{ link_to_route('users.show', trans('app.cancel'), [$user->id], ['class' => 'btn btn-default']) }}
             </div>
@@ -132,7 +132,7 @@
 @endsection
 
 @section('script')
-<script src="{{ asset('js/plugins/jquery.datetimepicker.js') }}"></script>jQuery('#datetimepicker').datetimepicker();
+<script src="{{ asset('js/plugins/jquery.datetimepicker.js') }}"></script>
 <script>
     (function() {
         $('#dob,#dod').datetimepicker({

@@ -85,11 +85,11 @@
                         </tr>
                         <tr>
                             <th>{{ __('user.father') }}</th>
-                            <td>{{ $user->father->name }}</td>
+                            <td>{{ !empty($user->father) ? $user->father->name : ''}}</td>
                         </tr>
                         <tr>
                             <th>{{ __('user.mother') }}</th>
-                            <td>{{ $user->mother->name }}</td>
+                            <td>{{ !empty($user->mother) ? $user->mother->name : ''}}</td>
                         </tr>
                         @if ($user->parent)
                             <tr>
