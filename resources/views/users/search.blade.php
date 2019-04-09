@@ -22,10 +22,10 @@
 @if (request('q'))
 <br>
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-8 col-sm-8 col-xs-7">
         {{ $users->appends(Request::except('page'))->render() }}
     </div>
-    <div class="col-md-4 text-right">
+    <div class="col-md-4 col-sm-4 col-xs-5 text-right">
         Total Members: {{ $users->total() }}
     </div>
 </div>
@@ -55,10 +55,10 @@
 @endforeach
 
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-8 col-sm-8 col-xs-7">
         {{ $users->appends(Request::except('page'))->render() }}
     </div>
-    <div class="col-md-4 text-right">
+    <div class="col-md-4 col-sm-4 col-xs-5 text-right">
         Total Members: {{ $users->total() }}
     </div>
 </div>
