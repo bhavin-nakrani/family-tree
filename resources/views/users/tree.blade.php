@@ -71,24 +71,26 @@ $ggccTotal = 0;
 <div class="row">
     <div class="col-md-1">&nbsp;</div>
     @if ($childsTotal)
-    <div class="col-md-1 text-right">{{ trans('app.child_count') }}</div>
-    <div class="col-md-1 text-left"><strong style="font-size:30px">{{ $childsTotal }}</strong></div>
+    <div class="col-md-2 text-right">{{ trans('app.child_count') }}
+        <br><strong style="font-size:30px">{{ $childsTotal }}</strong>
+    </div>
+    {{--<div class="col-md-1 text-left"><strong style="font-size:30px">{{ $childsTotal }}</strong></div>--}}
     @endif
     @if ($grandChildsTotal)
-    <div class="col-md-1 text-right">{{ trans('app.grand_child_count') }}</div>
-    <div class="col-md-1 text-left"><strong style="font-size:30px">{{ $grandChildsTotal }}</strong></div>
+    <div class="col-md-2 text-right">{{ trans('app.grand_child_count') }} <br> <strong style="font-size:30px">{{ $grandChildsTotal }}</strong></div>
+    {{--<div class="col-md-1 text-left"><strong style="font-size:30px">{{ $grandChildsTotal }}</strong></div>--}}
     @endif
     @if ($ggTotal)
-    <div class="col-md-1 text-right">{{ trans('app.great_grand_child_count') }}</div>
-    <div class="col-md-1 text-left"><strong style="font-size:30px">{{ $ggTotal }}</strong></div>
+    <div class="col-md-2 text-right">{{ trans('app.great_grand_child_count') }} <br> <strong style="font-size:30px">{{ $ggTotal }}</strong></div>
+    {{--<div class="col-md-1 text-left"><strong style="font-size:30px">{{ $ggTotal }}</strong></div>--}}
     @endif
     @if ($ggcTotal)
-    <div class="col-md-1 text-right">{{ trans('app.dejection') }}</div>
-    <div class="col-md-1 text-left"><strong style="font-size:30px">{{ $ggcTotal }}</strong></div>
+    <div class="col-md-2 text-right">{{ trans('app.dejection') }} <br> <strong style="font-size:30px">{{ $ggcTotal }}</strong></div>
+    {{--<div class="col-md-1 text-left"><strong style="font-size:30px">{{ $ggcTotal }}</strong></div>--}}
     @endif
     @if ($ggccTotal)
-    <div class="col-md-1 text-right">{{ trans('app.total_ware') }}</div>
-    <div class="col-md-1 text-left"><strong style="font-size:30px">{{ $ggccTotal }}</strong></div>
+    <div class="col-md-2 text-right">{{ trans('app.total_ware') }} <br> <strong style="font-size:30px">{{ $ggccTotal }}</strong></div>
+    {{--<div class="col-md-1 text-left"><strong style="font-size:30px">{{ $ggccTotal }}</strong></div>--}}
     @endif
     <div class="col-md-1">&nbsp;</div>
 </div>
