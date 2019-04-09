@@ -55,9 +55,15 @@ class UpdateRequest extends FormRequest
         $formData = parent::validated();
 
         if ($formData['dod']) {
-            $formData['yod'] = substr($formData['dod'], 0, 4);
+            $yod = substr($formData['dod'], 0, 4);
         } else {
-            $formData['yod'] = $formData['yod'];
+            $yod = $formData['yod'];
+        }
+
+        if(!empty($formData['yod'])) {
+            $formData['yod'] = $yod.'-01-01';
+        } else {
+            $formData['yod'] = $yod;
         }
 
         if (!empty($formData['password'])) {

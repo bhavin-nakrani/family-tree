@@ -18,16 +18,16 @@
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
             <!-- Left Side Of Navbar -->
-            <ul class="nav navbar-nav">
-                <li><a href="{{ route('users.search') }}">{{ trans('app.search_your_family') }}</a></li>
-            </ul>
+            {{--<ul class="nav navbar-nav">
+                <li><a href="{{ route('users.search') }}">{{ trans('app.search') }}</a></li>
+            </ul>--}}
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
                 <?php $mark = (preg_match('/\?/', url()->current())) ? '&' : '?'; ?>
                 {{--<li><a href="{{ url(url()->current() . $mark . 'lang=en') }}">en</a></li>--}}
-
+                <li><a href="{{ route('users.search') }}">{{ trans('app.search') }}</a></li>
                 @if (Auth::guest())
                     <li><a href="{{ route('login') }}">Login</a></li>
                     <li><a href="{{ route('register') }}">Register</a></li>

@@ -21,7 +21,14 @@
 
 @if (request('q'))
 <br>
-{{ $users->appends(Request::except('page'))->render() }}
+<div class="row">
+    <div class="col-md-8">
+        {{ $users->appends(Request::except('page'))->render() }}
+    </div>
+    <div class="col-md-4 text-right">
+        Total Members: {{ $users->total() }}
+    </div>
+</div>
 @foreach ($users->chunk(4) as $chunkedUser)
 <div class="row">
     @foreach ($chunkedUser as $user)
@@ -47,6 +54,13 @@
 </div>
 @endforeach
 
-{{ $users->appends(Request::except('page'))->render() }}
+<div class="row">
+    <div class="col-md-8">
+        {{ $users->appends(Request::except('page'))->render() }}
+    </div>
+    <div class="col-md-4 text-right">
+        Total Members: {{ $users->total() }}
+    </div>
+</div>
 @endif
 @endsection
