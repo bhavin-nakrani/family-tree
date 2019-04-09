@@ -200,6 +200,10 @@ class UsersController extends Controller
         return back();
     }
 
+    /**
+     * @param User $user
+     * @return \Illuminate\Http\Response
+     */
     public function exportProfile(User $user)
     {
         $usersMariageList = $this->getUserMariageList($user);
@@ -214,6 +218,8 @@ class UsersController extends Controller
             'femalePersonList' => $femalePersonList,
             'allMariageList'   => $allMariageList,
         ];
+
+        //return view('pdf.user_profile', $data);
 
         $pdfView = PDF::loadView('pdf.user_profile', $data);
         return $pdfView->download($user->name.'-profile.pdf');
