@@ -21,4 +21,35 @@
 
 .pdb50 { padding-bottom: 50px !important;}
 .pdt20 { padding-top: 20px !important;}
+.pdt80 { padding-top: 80px !important;}
 .fnt14 { font-size: 14px !important;}
+.pY-100 {
+  padding-top: 100px !important;
+  padding-bottom: 100px !important;
+}
+.pY-80 {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+.pX-40 {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+.mgt10 { margin-top: 10px !important;}
+.mgt20 { margin-top: 20px !important;}
+.mgt30 { margin-top: 30px !important;}
+.mgt40 { margin-top: 40px !important;}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .back-img { display: none;}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {  }
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {  }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (max-width: 1200px) {  }

@@ -23,7 +23,7 @@
     <div id="app">
         @include('layouts.partials.nav')
 
-        <div class="container">
+        <div class="container pdt80">
         @yield('content')
         </div>
     </div>
