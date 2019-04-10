@@ -3,9 +3,7 @@
 @section('content')
 
     <div class="row" style="height: 100vh">
-        <div class="col-md-8 back-img" style="background-image:url({{ asset('images/family.jpg') }}); background-repeat: no-repeat;background-position-y: center;background-position-x: center;background-size: cover;height: 100%;">
-
-        </div>
+        <div class="col-md-8 back-img" style="background-image:url({{ asset('images/family.jpg') }}); background-repeat: no-repeat;background-position-y: center;background-position-x: center;background-size: cover;height: 100%;"></div>
         <div class="col-md-4">
             <div class="pY-100">
                 <h3 class="text-center">Login</h3>

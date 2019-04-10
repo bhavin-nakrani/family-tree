@@ -1,12 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.auth_app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
-                <div class="panel-body">
+    <div class="row" style="height: 100vh">
+        <div class="col-md-8 back-img" style="background-image:url({{ asset('images/family.jpg') }}); background-repeat: no-repeat;background-position-y: center;background-position-x: center;background-size: cover;height: 100%;"></div>
+        <div class="col-md-4">
+            <div class="pY-80">
+                <h3 class="text-center">Register</h3>
+                <div class="mgt30">
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
@@ -94,5 +94,4 @@
             </div>
         </div>
     </div>
-</div>
 @endsection

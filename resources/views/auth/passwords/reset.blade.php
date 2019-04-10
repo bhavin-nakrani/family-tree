@@ -1,13 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.auth_app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Reset Password</div>
-
-                <div class="panel-body">
+    <div class="row" style="height: 100vh">
+        <div class="col-md-8 back-img" style="background-image:url({{ asset('images/family.jpg') }}); background-repeat: no-repeat;background-position-y: center;background-position-x: center;background-size: cover;height: 100%;"></div>
+        <div class="col-md-4">
+            <div class="pY-100">
+                <h3 class="text-center">Reset Password</h3>
+                <div class="mgt30">
                     @if (session('status'))
                         <div class="alert alert-success">
                             {{ session('status') }}
@@ -72,5 +71,4 @@
             </div>
         </div>
     </div>
-</div>
 @endsection
